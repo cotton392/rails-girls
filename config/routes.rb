@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :comments
+  devise_for :users
+  # resources :comments
   get 'pages/info'
 	root to: redirect('/ideas')
   resources :ideas do
